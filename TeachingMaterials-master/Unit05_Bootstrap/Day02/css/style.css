@@ -1,0 +1,43 @@
+
+@media print {
+    #search-div {
+        display: none;
+    }
+}
+
+/*a.sudo {*/
+    /*font-weight: bold;*/
+    /*text-decoration: underline;*/
+/*}*/
+/*a.sudo:link {*/
+    /*color: cornflowerblue;*/
+/*}*/
+/*a.sudo:visited {*/
+    /*color: darkblue;*/
+/*}*/
+/*a.sudo:hover {*/
+    /*background-color: lightgrey;*/
+/*}*/
+/*a.sudo:active {*/
+    /*background-color: lightgreen;*/
+/*}*/
+
+/*input[type=text]:first-of-type {*/
+    /*background-color: lightsalmon !important;*/
+/*}*/
+
+/*label::first-letter {*/
+    /*color: red;*/
+    /*font-weight: bold;*/
+/*}*/
+
+/*#search-div::before {*/
+    /*content: "";*/
+    /*width: 14px;*/
+    /*height: 14px;*/
+    /*background: navy;*/
+    /*border: solid darkgray 1px;*/
+    /*display: block;*/
+    /*float: left;*/
+    /*margin: 8px 5px 0 0;*/
+/*}*/

@@ -1,0 +1,14 @@
+{
+  "name": "data-encryptor",
+  "version": "1.0.0",
+  "description": "A simple data encryption/decryption webapp",
+  "main": "index.js",
+  "author": "Brad Stapleton",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.5.0",
+    "express": "^4.13.3",
+    "https": "^1.0.0",
+    "request": "^2.62.0"
+  }
+}

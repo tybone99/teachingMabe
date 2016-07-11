@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input Demo</title>
+	<style>
+		* {
+		}
+		header h1 {
+			text-align: center;
+			position: fixed;
+			width: 100%;
+			top:0;
+			color: #F1FAEE;
+			background-color: #457B9D;
+			height: 40px;
+			margin-top: 0;
+			padding: 10px 0;
+		}
+		section {
+			background-color: #F8F3D3;
+			padding: 2px 15px 10px;
+			border-radius: 12px;
+			margin-top: 80px;
+			border: 2px #6F1D1B dashed;
+		}
+		input[type=submit] {
+			font-weight: bold;
+			font-size: 18pt;
+			font-style: italic;
+			padding: 10px 20px;
+			background-color: #E4EBED;
+			border: 3px solid #457B9D;
+			border-radius: 3px;
+			color: #254B6D;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>So Many Inputs</h1>
+	</header>
+	<main>
+		<section>
+			<h2>Text Inputs</h2>
+			<form name="textInputs" method="GET" action="inputsReceived.html">
+				Just Text: 
+				<input type="text" name="regularText" /><br/>
+				<br/>
+				Search:
+				<input type="search" name="searchText" /><br/>
+				Telephone:
+				<input type="tel" name="telephoneText" /><br/>
+				URL:
+				<input type="url" name="urlText" /><br/>
+				Email:
+				<input type="email" name="emailText" /><br/>
+				<br/>
+				Password:
+				<input type="password" name="pwText"/><br/>
+				More Text (textarea):
+				<textarea name="textareaDemo"></textarea><br/>
+				<br/>
+				<input type="submit"/>
+			</form>
+		</section>
+		<section>
+			<h2>Check/Radio</h2>
+			<form name="checkRadioInputs" method="GET" action="inputsReceived.html">
+				What color are your eyes?<br/>
+				<input type="checkbox" name="blueCheck" value="blue"/> Blue <br/>
+				<input type="checkbox" name="brownCheck" value="brown" checked="checked"/> Brown <br/>
+				<input type="checkbox" name="greenCheck" value="green"/> Green <br/>
+				<input type="checkbox" name="yellowCheck" value="yellow"/> Yellow <br/>
+				<input type="checkbox" name="redCheck" value="red"/> Red <br/>
+				<br/>
+				What is your gender?<br/>
+				<label><input type="radio" name="gender" value="male" checked="checked"/> Male</label><br/>
+				<label><input type="radio" name="gender" value="female" checked="checked"/> Female</label><br/>
+				<br/>
+				<input type="submit"/>
+			</form>
+		</section>
+		<section>
+			<h2>Date and Time Inputs</h2>
+			<form name="dateTimeForm" method="GET" action="inputsReceived.html">
+				Just Date: <input type="date" name="dateOnly"/><br/>
+				Just Time: <input type="time" name="timeOnly"/><br/>
+				Date/time: <input type="datetime" name="dateTime"/><br/>
+				Date/time (local): <input type="datetime-local" name="dateTimeLoc"/><br/>
+				Week: <input type="week" name="week"/><br/>
+				Month: <input type="month" name="month"/><br/>
+				<br/>
+				<input type="submit"/>
+			</form>
+		</section>
+		<section>
+			<h2>Number inputs</h2>
+			<form name="numberForm" method="GET" action="inputsReceived.html">
+				Age: <input type="number" name="age"><br/>
+				% Completed: <input type="range" name="what"/><br/>
+				<br/>
+				<input type="submit"/>
+			</form>
+		</section>
+		<section>
+			<h2>Color inputs</h2>
+			<form name="colorForm" method="GET" action="inputsReceived.html">
+				Hair color:
+				<input type="color" name="hairColor" /><br/>
+				<br/>
+				<input type="submit"/>
+			</form>
+		</section>
+	</main>
+</body>
+</html>

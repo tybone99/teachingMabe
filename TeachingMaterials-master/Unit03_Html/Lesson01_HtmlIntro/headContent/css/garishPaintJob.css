@@ -1,0 +1,38 @@
+* {
+	font-family: Georgia;
+}
+body {
+	background-color: #AAA;
+}
+h1, #header {
+	font-family: Verdana;
+}
+h1 {
+	padding-left: 30px;
+	background-color: #2B2;
+	color: #3FE;
+}
+#header {
+	text-align:center;
+	background-color: #A33;
+	color: white;
+	padding: 40px;
+	font-size: 24pt;
+}
+#centerContent {
+	width: 1200px;
+	background-color: #FFD;
+	margin: 0 auto;
+	padding: 10px;
+}
+.showUnstyled {
+	display: none;
+}
+a {
+	font-size: 18pt;
+	font-weight: bolder;
+}
+a:hover {
+	background-color: #EEC;
+	color: #A7A;
+}

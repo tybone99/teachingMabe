@@ -1,0 +1,17 @@
+textarea {
+    width: 90%;
+}
+#mainContent {
+    display: flex;
+    flex-direction: row;
+}
+.column {
+    flex-grow: 1;
+}
+.column h1 {
+    text-align: center;
+}
+.sidenote {
+    font-style: italic;
+    font-size: 10pt;
+}

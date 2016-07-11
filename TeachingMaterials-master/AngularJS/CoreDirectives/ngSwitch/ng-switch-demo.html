@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngSwitch Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body ng-app>
+    <h1>ngSwitch Demo</h1>
+    <button ng-click="page='Home'">Home</button>
+    <button ng-click="page='About'">About</button>
+    <button ng-click="page='Contact'">Contact</button>
+    <div ng-switch on="page">
+        <p ng-switch-when="Home">This is the Home page</p>
+        <p ng-switch-when="About">This is the About page</p>
+        <p ng-switch-when="Contact">This is the Contact page</p>
+        <p ng-switch-default>Welcome!</p>
+    </div>
+    <br>
+    <br>
+    <label>page:</label>
+    <pre>{{ page }}</pre>
+</body>
+</html>

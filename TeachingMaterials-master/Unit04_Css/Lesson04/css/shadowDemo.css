@@ -1,0 +1,74 @@
+main {
+    width: 960px;
+}
+
+.card {
+    float: left;
+    width: 160px;
+    height: 100px;
+    background-color: #38A02C;
+    margin-left: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+.cardSet {
+    margin-bottom: 30px;
+}
+.carSetEnd {
+    clear:both;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 100px -180px 18px 80px #999;
+        background-color: #38A02C;
+    }
+    15% {
+        box-shadow: 100px -180px 18px 80px #555;
+        background-color: #99E666;
+    }
+    30% {
+        box-shadow: 100px -180px 18px 80px #999;
+        background-color: #38A02C;
+    }
+    37% {
+        box-shadow: 100px -180px 18px 80px #888;
+        background-color: #50b13b;
+    }
+    50% {
+        box-shadow: 100px -180px 18px 80px #999;
+        background-color: #38A02C;
+    }
+    56% {
+        box-shadow: 100px -180px 18px 80px #666;
+        background-color: #81D457;
+    }
+    63% {
+        box-shadow: 100px -180px 18px 80px #777;
+        background-color: #68c348;
+    }
+    79% {
+        box-shadow: 100px -180px 18px 80px #555;
+        background-color: #99E666;
+    }
+    100% {
+        box-shadow: 100px -180px 18px 80px #999;
+        background-color: #38A02C;
+    }
+}
+#animatedLightCard {
+    box-shadow: 100px -180px 18px 80px #333;
+    animation: pulsate 4s ease 0s infinite normal none;
+    margin-top: 300px;
+}
+
+#insetSection .card {
+    background-color: white;
+}
+#insetSection .hoverShadow {
+    border: 1px solid #ccc;
+}
+#insetSection .hoverShadow:hover {
+    box-shadow: 2px 2px 8px 2px #777 inset;
+}

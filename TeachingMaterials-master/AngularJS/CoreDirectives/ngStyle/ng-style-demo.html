@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngStyle Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body ng-app>
+    <h1>ngStyle Demo</h1>
+    <p ng-style="myStyle">The color of this text should change according to the color value assigned below.</p>
+    <input type="text" ng-model="myColor"/>
+    <button ng-click="myStyle={color: myColor}">Set Color</button>
+    <br>
+    <br>
+    <label>myColor:</label>
+    <pre>{{ myColor }}</pre>
+    <label>myStyle:</label>
+    <pre>{{ myStyle }}</pre>
+</body>
+</html>

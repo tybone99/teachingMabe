@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Core Directives Lab</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body ng-app>
+    <div class="container">
+        <h1>Dr. Gonzalez Patient Information Form</h1>
+        <form ng-submit="">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" ng-model="vm.form.name">
+            </div>
+            <div class="form-group">
+                <label for="legalName">Legal Name</label>
+                <input type="text" class="form-control" id="legalName" placeholder="Legal Name" ng-model="vm.form.legalName">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" ng-model="vm.form.dob">
+            </div>
+            <div class="form-group">
+                <label>Sex</label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="sex1" value="female" ng-model="vm.form.sex">Female
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="sex2" value="male" ng-model="vm.form.sex">Male
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Do you have health insurance?</label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="insurance1" value="yes" ng-model="vm.form.insurance">Yes
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="insurance2" value="no" ng-model="vm.form.insurance">No
+                    </label>
+                </div>
+            </div>
+            <div class="alert alert-danger" role="alert">Who should pay the full amount when I have no insurance? You should, of course!</div>
+            <div class="form-group">
+                <label for="painScale">Pain Scale</label>
+                <input type="number" class="form-control" id="painScale" ng-model="vm.form.pain">
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <pre>{{ vm.form }}</pre>
+    </div>
+</body>
+</html>

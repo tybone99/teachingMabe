@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<script src="cipher.js"></script>
+		<script src="decipher.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				document.getElementById("smallCipherNow").onclick = runCipher;
+				document.getElementById("largeCipherNow").onclick = runLargeCipher;
+				document.getElementById("smallDecipher").onclick = attemptDecipher;
+				document.getElementById("largeDecipher").onclick = attemptGrandDecipher;
+			});
+			
+			function runCipher() {
+				var message = document.getElementById("cipherInput").value;
+				var encoded = encodeBasic(message);
+				document.getElementById("cipherOutput").value = encoded;
+			}
+			function runLargeCipher() {
+				var message = document.getElementById("cipherInput").value;
+				var encoded = encodeLarger(message);
+				document.getElementById("cipherOutput").value = encoded;
+			}
+			function attemptDecipher() {
+				var cipher = document.getElementById("cipherOutput").value;
+				var guessData = guessShiftDistance(cipher);
+				document.getElementById("decipherGuesses").value = guessData;
+			}
+			function attemptGrandDecipher() {
+				var cipher = document.getElementById("cipherOutput").value;
+				var guessData = guessLargerShiftDistance(cipher);
+				document.getElementById("decipherGuesses").value = guessData;
+			}
+		</script>
+		<style>
+			textarea {
+				width: 100%;
+				heigth: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Encryption</h1>
+		<section>
+			<b>Message</b>:<br/>
+			<textarea id="cipherInput">vigilante: what gives you the right? what's the difference between you and me? batman: i'm not wearing hockey pads.</textarea><br/>
+			<button id="smallCipherNow">Encrypt lowercase letters</button>
+			<button id="largeCipherNow">Encrypt everything</button>
+		</section>
+		<section>
+			<b>Cipher Result</b>:<br/>
+			<textarea id="cipherOutput"></textarea>
+		</section>
+		<hr/>
+		<h1>Decryption</h1>
+		<section>
+			<button id="smallDecipher">Attempt lowercase decipher</button>
+			<button id="largeDecipher">Attempt all character decipher</button>
+			<br/>
+			<textarea id="decipherGuesses" rows="27"></textarea>
+		</section>
+	</body>
+</html>	

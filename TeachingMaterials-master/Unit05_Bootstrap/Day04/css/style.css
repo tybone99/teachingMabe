@@ -1,0 +1,56 @@
+/*!
+ * Start Bootstrap - Business Frontpage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    /*padding-top: 50px; /!* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. *!/*/
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.business-header {
+    /*height: 700px;*/
+    /*background: url('../img/masthead.jpg') center center no-repeat scroll;*/
+    height: 500px;
+    background: url('../img/masthead-circles.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.business-header h1 {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.business-header h4 {
+    text-shadow: 0 0 6px #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+footer {
+    margin: 40px 0 10px 0;
+}
+
+.overlay-container {
+    margin-top: -250px;
+    background-color: #fff;
+    opacity: 0.8;
+    padding: 0 30px 10px 30px;
+    border-radius: 6px !important;
+}
+
+.body-container {
+    margin-top: 60px;
+}

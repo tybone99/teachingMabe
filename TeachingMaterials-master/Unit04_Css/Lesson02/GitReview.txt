@@ -1,0 +1,25 @@
+Overarching goal:
+	Track changes and have a backup, either locally or both locally and remotely
+	Please be committing every time you get something working. Push...daily? Weekly?
+	Start local, move to remote
+	If you're solid, 
+		look at SourceTree. 
+		Move your portfolio to a git repo and push it. 
+		Branching
+
+Good/Bad
+	Keep git repos separate (at root)
+	You can move the entire repo my moving the containing folder
+	Use a text editor: http://macromates.com/
+		git config --global core.editor emacs
+	
+New local repo
+	git init
+	Changes workflow: http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
+	Untracked: unknown to git
+	Unmodified: file in a clean state (git has a record of all changes)
+	Modified: file in a "dirty" state
+	Staged: Changes have been made and acknowledged
+	
+	
+	

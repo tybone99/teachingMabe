@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting Samples</title>
+</head>
+<body>
+    <h1>Troubleshooting Samples</h1>
+
+    <h3>Bad DOM</h3>
+    <div>
+        <div>Browsers are very forgiving; they close unclosed tags.
+        <spen>They ignore unknown tags</spen>
+    </div>
+
+    <h3>List 10 odd numbers starting with 15. Number the answers 1-10.</h3>
+
+        <h4>Correct:</h4>
+        <script>
+            var startingNumber = 15;
+            for (var i=0; i<10; i++) {
+                document.writeln(i + 1 + ': ' + (startingNumber + i * 2) + '<br />');
+            }
+        </script>
+
+        <h4>Syntax Error:</h4>
+        <script>
+            var startingNumber = 15;
+            for (var i=0; i<10; i++) {
+                document.writeln(i + 1 + ': ' + (startingNumber + i * 2) '<br />');
+            }
+        </script>
+
+        <h4>Semantic Error:</h4>
+        <script>
+            var startingNumber = 15;
+            for (var i=0; i<10; i++) {
+                document.writeln(i + 1 + ': ' + startingNumber + i * 2 + '<br />');
+            }
+        </script>
+
+        <h4>Logic Error:</h4>
+        <script>
+            var startingNumber = 15;
+            for (var i=0; i<10; i+=2) {
+                document.writeln(i + 1 + ': ' + (startingNumber + i) + '<br />');
+            }
+        </script>
+
+</body>
+</html>

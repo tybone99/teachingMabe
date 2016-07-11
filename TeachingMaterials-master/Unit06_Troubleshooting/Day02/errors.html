@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.c/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min"></script>
+        <link src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></link>
+            h1#myElement {
+                color: red
+            }
+            #myElement {
+                // I want this color
+                color: green;
+            }
+        var correctText = 'This is the text that should be displayed;
+    </head>
+    <body>
+        <div class="container>
+            <table class="table,table-bordered">
+                <tr>
+                    <td>
+                        <h1 id="myElement" class="text-center">You should <b>not</b> see this text!</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        document.getElementByID('myElement').innerHTML = correctText;
+        </script>
+    </body>
+</html>

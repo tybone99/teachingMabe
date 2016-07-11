@@ -1,0 +1,19 @@
+
+REQUIRED FUNCTIONALITY
+
+    Users can create any number of To Do lists
+    Each list is a different tab. Clicking on a tab loads different lists using the same view
+    Users can create any number of tasks in a list
+    Users can mark a task as complete
+    Users can clear their completed tasks
+    Use ui-router to navigate between an about page and the main list page
+    Use some basic styles to enhance the look of the page
+
+AWESOME FUNCTIONALITY
+
+    Users can name lists
+    Users can modify the text of an existing list item
+    Users can delete tasks and lists without needing to complete them first
+    Marking tasks complete or clearing all completed tasks/lists is animated
+    Use ngStorage to store all list data to local storage
+    Super-awesome-fantastic styling of your app

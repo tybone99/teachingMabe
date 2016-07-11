@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Forms</title>
+	<!-- Latest compiled and minified CSS -->
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="lib/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--<link rel="stylesheet" media="print" href="css/print.css" />-->
+	<!-- Optional theme -->
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
+	<!--<link rel="stylesheet" href="lib/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
+	<!-- Latest compiled and minified JavaScript -->
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+	<!--<script src="lib/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+</head>
+<body class="container">
+
+<!--
+	.panel.panel-success
+	.panel-heading Contact Form
+	.panel-body
+	form
+
+	.form-group
+	label name First & Last Name
+	input.form-control id:name ph:Bob Sanchez
+
+	.form-group
+	label email Email Address
+	input.form-control id:email ph:bob@gmail.com
+
+	.form-group
+	label password Password
+	input.form-control password id:password ph:password
+
+	.form-group
+	label
+		input checkbox Send me updates by email
+	p.help-block Instructions for updates.
+
+	button.btn.btn-default submit Submit
+-->
+
+<div class="panel panel-success">
+	<div class="panel-heading">Contact Form</div>
+	<div class="panel-body">
+		<form>
+		
+			<!-- name, address, password -->
+			<div class="form-group">
+				<label for="name">First & Last Name</label>
+				<input type="text" class="form-control" id="name" placeholder="Bob Sanchez"/>
+			</div>
+			<div class="form-group">
+				<label for="email">Email Address</label>
+				<input type="email" class="form-control" id="email" placeholder="bob@gmail.com"/>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" placeholder="password"/>
+			</div>
+
+			<!-- address -->
+			<div class="form-group">
+				<label for="street">Street Address</label>
+				<input type="text" class="form-control" id="street"/>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="city">City</label>
+						<input type="text" class="form-control" id="city"/>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="form-group">
+						<label for="state">State</label>
+						<input type="text" class="form-control" id="state"/>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label for="zip">Zip</label>
+						<input type="text" class="form-control" id="zip"/>
+					</div>
+				</div>
+			</div>
+
+			<!-- checkbox and submit -->
+			<div class="form-group">
+				<label>
+					<input type="checkbox"/> Send me updates by email
+				</label>
+				<p class="help-block">Instructions for updates.</p>
+			</div>
+			<button class="btn btn-default btn-primary" type="submit">Submit</button>
+		</form>
+	</div>
+</div>
+
+<!--
+	^
+	.form-group
+	label street Street Address
+	input.form-control id:street
+
+	.row
+		.col-sm-6
+		.form-group
+			label city City
+			input.form-control city
+		.col-sm-2
+		.form-group
+			label state State
+			input.form-control state
+		.col-sm-4
+		.form-group
+			label zip Zip
+			input.form-control zip
+-->
+
+<!--
+	.well-sm
+	form.form-inline
+	.form-group
+	label searchtext Search
+	input.form-control id:searchtext
+
+	button.btn.btn-info submit GO
+
+	fieldset disabled
+-->
+
+	<!-- mini search form -->
+	<div class="well-sm hidden-print hidden-xs" id="search-div">
+		<form class="form-inline">
+			<fieldset disabled>
+				<div class="form-group">
+					<label for="searchtext">Search</label>
+					<input type="text" class="form-control" id="searchtext"/>
+				</div>
+				<button class="btn btn-info" type="submit">GO</button>
+			</fieldset>
+		</form>
+	</div>
+
+<!--
+	^
+	jump out of bootstrap to plain css...
+	style.css
+	id:search-div
+	print display:none
+	print.css
+
+	bootstrap...
+	.hidden-print
+	search .hidden-xs
+-->
+
+<!--
+	.content.visible-print-block Watermark goes here
+-->
+
+	<div class="content visible-print-block text-center">Watermark goes here</div>
+
+<!--
+	a.sudo # Pseudo Stylin'
+	css...
+	:first-of-type
+	::first-letter
+	::before
+-->
+
+	<div class="well-sm">
+		<a href="#" class="sudo">Pseudo Stylin'</a>
+	</div>
+
+</body>
+</html>

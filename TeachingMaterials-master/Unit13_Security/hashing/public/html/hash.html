@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hashing</title>
+    <style>
+        textarea {
+            width: 90%;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="../js/ngApp.js"></script>
+    <script src="../js/HashService.js"></script>
+    <script src="../js/HashController.js"></script>
+</head>
+<body data-ng-app="hashApp" data-ng-controller="HashController as hash">
+    Hash Algorithm:
+    <select id="algorithms" data-ng-options="eachHash as eachHash for eachHash in hash.supportedHashes"
+            data-ng-model="hash.selectedHash">
+    </select>
+    <br/>
+
+    <h1>Message</h1>
+    <textarea placeholder="Any data" rows="5" data-ng-model="hash.message"></textarea>
+    <br/>
+    Password: <input type="text" data-ng-model="hash.hashKey"/>
+    <br/>
+    <button data-ng-click="hash.doHash()">Hash! &#8595;</button>
+    <button data-ng-click="hash.doSaltHash()">Hash with Salt! &#8595;</button>
+
+    <h1>Result</h1>
+    <textarea rows="5" placeholder="Result will show up here..." data-ng-model="hash.result"></textarea>
+
+    <hr/>
+
+    <h1>Password Hashing</h1>
+    Password: <input type="text" data-ng-model="hash.password"/><br/>
+    Iterations: <input type="number" data-ng-model="hash.iterations"/><br/>
+    <button data-ng-click="hash.doPasswordHash()">Hash Password! &#8595;</button>
+    <br/>
+    <h1>Results (would be stored on server)</h1>
+    Hash Result: {{hash.passwordResult}} <br/>
+    Salt Result: {{hash.salt}}
+</body>
+</html>

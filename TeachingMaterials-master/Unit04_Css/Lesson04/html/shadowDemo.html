@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box-Shadow Demo</title>
+    <link href="../css/shadowDemo.css" rel="stylesheet" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Box-shadow Syntax:</h1>
+            <code>
+                box-shadow: <i>offset-x offset-y [blur-radius] [spread-radius] [color]</i>
+            </code>
+        </header>
+
+        <section class="cardSet">
+            <h1>Shadow Position</h1>
+            <div class="card" style="box-shadow: 5px 10px;">
+                5px right, 10px down<br/>
+                <code>box-shadow: 5px 10px</code>
+            </div>
+            <div class="card" style="box-shadow: 15px 3px;">
+                15px right, 3px down<br/>
+                <code>box-shadow: 15px 3px</code>
+            </div>
+            <div class="card" style="box-shadow: -5px -8px;">
+                5px left, 8px up<br/>
+                <code>box-shadow: -5px -8px</code>
+            </div>
+            <div class="card" style="box-shadow: 150px 12px;">
+                (Wonky) 150px right, 12px down<br/>
+                <code>box-shadow: 150px 12px</code>
+            </div>
+            <br class="carSetEnd"/>
+        </section>
+
+        <section class="cardSet">
+            <h1>Blur-radius</h1>
+            <div class="card" style="box-shadow: 5px 10px;">
+                Default (0)<br/>
+                <code>box-shadow: 5px 10px</code>
+            </div>
+            <div class="card" style="box-shadow: 5px 10px 5px;">
+                5px blur<br/>
+                <code>box-shadow: 5px 10px 5px</code>
+            </div>
+            <div class="card" style="box-shadow: 5px 10px 50px;">
+                50px blur<br/>
+                <code>box-shadow: 5px 10px 50px</code>
+            </div>
+            <div class="card" style="box-shadow: 5px 10px 50px; border: 1px solid black;">
+                50px blur(better?)<br/>
+                <code>box-shadow: 5px 10px 50px</code>
+            </div>
+            <br class="carSetEnd"/>
+        </section>
+
+        <section class="cardSet">
+            <h1>Spread</h1>
+            <div class="card" style="box-shadow: 5px 15px 5px;">
+                Default (0 spread)<br/>
+                <code>box-shadow: 5px 15px 5px</code>
+            </div>
+            <div class="card" style="box-shadow: 5px 15px 5px 10px;">
+                +10 Spread<br/>
+                <code>box-shadow: 5px 15px 5px 10px</code>
+            </div>
+            <div class="card" style="box-shadow: 5px 15px 5px -10px;">
+                -10 Spread<br/>
+                <code>box-shadow: 5px 15px 5px -10px</code>
+            </div>
+            <br class="carSetEnd"/>
+        </section>
+
+        <section class="cardSet">
+            <h1>Shadow colors</h1>
+            <div class="card" style="box-shadow: 5px 10px;">
+                Default (Black)<br/>
+                <code>box-shadow: 5px 10px</code>
+            </div>
+            <div class="card" style="box-shadow: 5px 10px #DDAAAA;">
+                Reddish<br/>
+                <code>box-shadow: 5px 10px #DDAAAA</code>
+            </div>
+            <div class="card" style="box-shadow: 5px 10px #38A02C;">
+                Green (oops)<br/>
+                <code>box-shadow: 5px 10px #38A02C</code>
+            </div>
+            <br class="carSetEnd"/>
+        </section>
+
+        <section class="cardSet">
+            <h1>Multiple Shadows</h1>
+            <p>Use a comma to add additional shadows</p>
+            <div class="card" style="box-shadow: 5px 10px, -10px 6px #662C76;">
+                <code>box-shadow: 5px 10px, -10px 6px #662C76</code>
+            </div>
+            <br class="carSetEnd"/>
+        </section>
+
+        <section id="insetSection" class="cardSet">
+            <h1>Inset Shadows</h1>
+            <p>
+                Use the term "inset" to put the shadow on top of the element, as if the element is sinking into the page
+            </p>
+            <div class="card" style="box-shadow: 2px 2px 8px 2px #777 inset;">
+                <code>box-shadow: 2px 2px 8px 2px #777 inset</code>
+            </div>
+            <div class="card hoverShadow"><!-- Look at the hoverShadow rule -->
+                <code>box-shadow: 2px 2px 8px 2px #777 inset</code>
+            </div>
+            <br class="carSetEnd"/>
+        </section>
+
+
+        <hr/>
+        <section class="cardSet">
+            <h1>All Together Now!</h1>
+            <h2>Translucent</h2>
+            <p>
+                By using a "washed-out" color that is similar to your element and a large blur, the shadow makes it
+                look like your element is slightly translucent, allowing light to pass behind it.
+            </p>
+            <div class="card" style="box-shadow: 5px 10px 10px #9FC59A;">
+                <code>box-shadow: 5px 10px 10px #9FC59A</code>
+            </div>
+            <br class="carSetEnd"/>
+
+            <h2>Straight Back</h2>
+            <p>
+                Our eyes see things smaller the farther back they are. To give the impression that an element is
+                hovering over the page, create a shadow that is smaller than the element, using a negative spread.
+                This generally means that you'll also have to shift it down, since spread affects both the x and y
+                directions.
+            </p>
+            <div class="card" style="box-shadow: 0 10px 8px -5px #666;">
+                <code>box-shadow: 0 10px 8px -5px #666</code>
+            </div>
+            <br class="carSetEnd"/>
+
+            <h2>Fuzzy Boundaries</h2>
+            <p>
+                By using no offset, we can create a soft border around our element. Make sure the color is the same as
+                the element, and the spread is half of the radius.
+            </p>
+            <p>
+                By itself, this looks pretty ugly, but you can use different amounts blur to create a "focal lense"
+                effect with multiple elements. More blur means the element is farther from the focal plane, less means
+                it's closer. (You can get the same effect for the text using text-shadow in the same way)
+            </p>
+            <div class="card" style="box-shadow: 0 0 8px 4px #38A02C;">
+                <code>box-shadow: 0 0 8px 4px #38A02C</code>
+            </div>
+            <br class="carSetEnd"/>
+            <p>
+                Using this idea, we can create a highlight using a different color, like this (generally used with :hover)
+            </p>
+            <div class="card" style="box-shadow:0 0 20px 5px #0367EA;">
+                <code>box-shadow: 0 0 20px 5px #0367EA</code>
+            </div>
+            <br class="carSetEnd"/>
+
+            <h2>Long-cast Shadow</h2>
+            <p>
+                By using very large values for the offset and spread, you can create a shadow as if it is cast 10 feet
+                back from the object. Just make sure you have enough room.
+            </p>
+            <p>
+                If you animate the color to be darker and lighter, it looks like an inconsistent light source. Match
+                this with an animation on the element's background-color to give it a more washed-out color when the
+                light goes brighter.
+            </p>
+            <div id="animatedLightContainer" style="width: 500px; height: 440px;">
+                <div id="animatedLightCard" class="card">
+                    <code>box-shadow: 0 0 8px 4px #38A02C</code>
+                </div>
+                <br class="carSetEnd"/>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

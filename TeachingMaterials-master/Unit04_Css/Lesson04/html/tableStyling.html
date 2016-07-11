@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Styles</title>
+    <link href="../css/tableStyling.css" rel="stylesheet"/>
+</head>
+<body>
+    <section id="default">
+        <h1>Default table styles</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td>Color</td>
+                    <td>Hex</td>
+                    <td>RGB</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Red</td>
+                    <td>#FF0000</td>
+                    <td>255, 0, 0</td>
+                </tr>
+                <tr>
+                    <td>Green</td>
+                    <td>#00FF00</td>
+                    <td>0, 255, 0</td>
+                </tr>
+                <tr>
+                    <td>Blue</td>
+                    <td>#0000FF</td>
+                    <td>0, 0, 255</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="borders">
+        <h1>Borders</h1>
+
+        <h2>Table-level</h2>
+        <table id="atTable">
+            <thead>
+                <tr>
+                    <td>Color</td>
+                    <td>Hex</td>
+                    <td>RGB</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Red</td>
+                    <td>#FF0000</td>
+                    <td>255, 0, 0</td>
+                </tr>
+                <tr>
+                    <td>Green</td>
+                    <td>#00FF00</td>
+                    <td>0, 255, 0</td>
+                </tr>
+                <tr>
+                    <td>Blue</td>
+                    <td>#0000FF</td>
+                    <td>0, 0, 255</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Row-level</h2>
+        <p>
+            Notice that CSS border rules on a TR tag don't do anything unless...
+        </p>
+        <table id="atRow">
+            <thead>
+            <tr>
+                <td>Color</td>
+                <td>Hex</td>
+                <td>RGB</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Red</td>
+                <td>#FF0000</td>
+                <td>255, 0, 0</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>#00FF00</td>
+                <td>0, 255, 0</td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>#0000FF</td>
+                <td>0, 0, 255</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>
+            ...we use border-collapse.
+        </p>
+        <table id="atCollapsedRow">
+            <thead>
+            <tr>
+                <td>Color</td>
+                <td>Hex</td>
+                <td>RGB</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Red</td>
+                <td>#FF0000</td>
+                <td>255, 0, 0</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>#00FF00</td>
+                <td>0, 255, 0</td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>#0000FF</td>
+                <td>0, 0, 255</td>
+            </tr>
+            </tbody>
+        </table>
+        <h2>Cell-level</h2>
+        <table id="atCell">
+            <thead>
+            <tr>
+                <td>Color</td>
+                <td>Hex</td>
+                <td>RGB</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Red</td>
+                <td>#FF0000</td>
+                <td>255, 0, 0</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>#00FF00</td>
+                <td>0, 255, 0</td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>#0000FF</td>
+                <td>0, 0, 255</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="spacing">
+        <h1>Cell Spacing</h1>
+        <h2>Default</h2>
+        <table>
+            <thead>
+            <tr>
+                <td>Color</td>
+                <td>Hex</td>
+                <td>RGB</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Red</td>
+                <td>#FF0000</td>
+                <td>255, 0, 0</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>#00FF00</td>
+                <td>0, 255, 0</td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>#0000FF</td>
+                <td>0, 0, 255</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>With Row Space</h2>
+        <table id="withRowSpace">
+            <thead>
+            <tr>
+                <td>Color</td>
+                <td>Hex</td>
+                <td>RGB</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Red</td>
+                <td>#FF0000</td>
+                <td>255, 0, 0</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>#00FF00</td>
+                <td>0, 255, 0</td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>#0000FF</td>
+                <td>0, 0, 255</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>With Column Space</h2>
+        <table id="withColSpace">
+            <thead>
+            <tr>
+                <td>Color</td>
+                <td>Hex</td>
+                <td>RGB</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Red</td>
+                <td>#FF0000</td>
+                <td>255, 0, 0</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>#00FF00</td>
+                <td>0, 255, 0</td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>#0000FF</td>
+                <td>0, 0, 255</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>With border-collapse</h2>
+        <table id="withCollapse">
+            <thead>
+            <tr>
+                <td>Color</td>
+                <td>Hex</td>
+                <td>RGB</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Red</td>
+                <td>#FF0000</td>
+                <td>255, 0, 0</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>#00FF00</td>
+                <td>0, 255, 0</td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>#0000FF</td>
+                <td>0, 0, 255</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="striping">
+        <h1>Striping</h1>
+
+        <h2>Rows</h2>
+        <table id="everyOtherRow" class="simpleStripes">
+            <thead>
+                <tr>
+                    <td>Color</td>
+                    <td>Hex</td>
+                    <td>RGB</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Red</td>
+                    <td>#FF0000</td>
+                    <td>255, 0, 0</td>
+                </tr>
+                <tr>
+                    <td>Green</td>
+                    <td>#00FF00</td>
+                    <td>0, 255, 0</td>
+                </tr>
+                <tr>
+                    <td>Blue</td>
+                    <td>#0000FF</td>
+                    <td>0, 0, 255</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Columns</h2>
+        <table id="everyOtherColumn" class="simpleStripes">
+            <thead>
+                <tr>
+                    <td>Color</td>
+                    <td>Hex</td>
+                    <td>RGB</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Red</td>
+                    <td>#FF0000</td>
+                    <td>255, 0, 0</td>
+                </tr>
+                <tr>
+                    <td>Green</td>
+                    <td>#00FF00</td>
+                    <td>0, 255, 0</td>
+                </tr>
+                <tr>
+                    <td>Blue</td>
+                    <td>#0000FF</td>
+                    <td>0, 0, 255</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Every 4th Row</h2>
+        <table id="everyFourthRow" class="simpleStripes">
+            <thead>
+                <tr>
+                    <td>Color</td>
+                    <td>Hex</td>
+                    <td>RGB</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Red</td>
+                    <td>#FF0000</td>
+                    <td>255, 0, 0</td>
+                </tr>
+                <tr>
+                    <td>Crimson</td>
+                    <td>#DC143C</td>
+                    <td>220, 20, 60</td>
+                </tr>
+                <tr>
+                    <td>DarkRed</td>
+                    <td>#8B0000</td>
+                    <td>139, 0, 0</td>
+                </tr>
+                <tr>
+                    <td>Maroon</td>
+                    <td>#800000</td>
+                    <td>128, 0, 0</td>
+                </tr>
+
+                <tr>
+                    <td>Lime</td>
+                    <td>#00FF00</td>
+                    <td>0, 255, 0</td>
+                </tr>
+                <tr>
+                    <td>LimeGreen</td>
+                    <td>#32CD32</td>
+                    <td>50, 205, 50</td>
+                </tr>
+                <tr>
+                    <td>Green</td>
+                    <td>#008000</td>
+                    <td>0, 128, 0</td>
+                </tr>
+                <tr>
+                    <td>DarkGreen</td>
+                    <td>#006400</td>
+                    <td>0, 100, 0</td>
+                </tr>
+
+                <tr>
+                    <td>Blue</td>
+                    <td>#0000FF</td>
+                    <td>0, 0, 255</td>
+                </tr>
+                <tr>
+                    <td>MediumBlue</td>
+                    <td>#0000CD</td>
+                    <td>0, 0, 205</td>
+                </tr>
+                <tr>
+                    <td>Navy</td>
+                    <td>#191970</td>
+                    <td>25, 25, 112</td>
+                </tr>
+                <tr>
+                    <td>MidnightBlue</td>
+                    <td>#000080</td>
+                    <td>0, 0, 128</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="rounded">
+        <h1>Rounded Corners</h1>
+        <p>
+            This poses some interesting challenges with borders and background colors.
+        </p>
+        <table>
+            <thead>
+            <tr>
+                <td>Color</td>
+                <td>Hex</td>
+                <td>RGB</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Red</td>
+                <td>#FF0000</td>
+                <td>255, 0, 0</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>#00FF00</td>
+                <td>0, 255, 0</td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>#0000FF</td>
+                <td>0, 0, 255</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

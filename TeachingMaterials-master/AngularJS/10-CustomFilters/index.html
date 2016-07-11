@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="exampleCustomFilterApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Example Custom Filter</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app/exampleCustomFilterApp.js"></script>
+</head>
+<body ng-controller="MarkController as vm">
+    <input type="checkbox" ng-model="vm.checkmarkVar" />
+    <br/>
+    <span ng-bind="vm.checkmarkVar | checkmark"></span>
+</body>
+</html>

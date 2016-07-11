@@ -1,0 +1,18 @@
+{
+  "name": "hashing",
+  "version": "1.0.0",
+  "description": "A simple project demonstrating how to hash data",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brad Stapleton",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.5.0",
+    "express": "^4.13.3",
+    "https": "^1.0.0",
+    "request": "^2.62.0"
+  }
+}

@@ -1,0 +1,26 @@
+<div class="alert alert-success">
+    <!--<img src="http://i.giphy.com/d2ZfEDl6ZBPj5qlq.gif"><br />-->
+    <br />
+
+    <h3>Angular Filters</h3><br />
+
+    <h4>Cost of Toothbrush: {{ hc.costOfToothbrush | currency }}</h4><br />
+    <h4>Alone Date: {{ hc.aloneDate | date:"yyyy-MM-dd 'hey' HH:mm:ssZ" | uppercase }}</h4><br />
+    <h4>Formatted: {{ hc.formattedDate }}</h4>
+    <h4>Marble Count: {{ hc.marbleCount | number }}</h4><br />
+
+    <h4>Contacts:</h4>
+    <input ng-model="searchText" placeholder="quick search">
+    <table>
+        <tr ng-repeat="contact in hc.contacts | orderBy:'name' | filter:searchText as filtered">
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.phone }}</td>
+        </tr>
+        <tr ng-if="filtered.length == 0">
+            <td>
+                No contacts found matching {{ searchText }}
+            </td>
+        </tr>
+    </table>
+
+</div>

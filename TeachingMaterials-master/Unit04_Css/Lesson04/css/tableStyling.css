@@ -1,0 +1,104 @@
+body {
+    background-color: #222;
+}
+h2 {
+    font-size: 1.2em;
+}
+section {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+table {
+    margin-bottom: 10px;
+}
+
+#borders #atTable {
+    border: 1px dashed black;
+}
+#borders #atCollapsedRow {
+    border-collapse: collapse;
+}
+#borders #atRow tr, #borders #atCollapsedRow tr {
+    border: 2px dotted darkblue;
+}
+#borders #atCell td {
+    border: 2px solid darkgreen;
+}
+
+#spacing table td {
+    border: 1px solid black;
+}
+#spacing #withRowSpace {
+    border-spacing: 0 10px;
+}
+#spacing #withColSpace {
+    border-spacing: 10px 0;
+}
+#spacing #withCollapse {
+    border-collapse: collapse;
+}
+
+.simpleStripes {
+    border-collapse: collapse;
+}
+.simpleStripes td {
+    padding: 10px;
+    border: 2px solid #662C76;
+}
+.simpleStripes thead tr {
+    text-align: center;
+    font-weight: bold;
+}
+
+#everyOtherRow thead tr {
+    background-color: #CBBBD0;
+}
+#everyOtherRow tbody tr:nth-child(odd) {
+    background-color: #C7D99E;
+}
+#everyOtherRow tbody tr:nth-child(even) {
+    background-color: #DFEBC3;
+}
+
+#everyOtherColumn thead tr td:nth-child(odd) {
+    background-color: #A08AA6;
+}
+#everyOtherColumn thead tr td:nth-child(even) {
+    background-color: #c5b3ca;
+}
+#everyOtherColumn tbody tr td:nth-child(odd) {
+    background-color: #C7D99E;
+}
+#everyOtherColumn tbody tr td:nth-child(even) {
+    background-color: #DFEBC3;
+}
+
+#everyFourthRow thead tr {
+    background-color: #CBBBD0;
+}
+#everyFourthRow tbody tr:nth-child(4n+1) {
+    background-color: #FEFCE5;
+}
+#everyFourthRow tbody tr:nth-child(4n+2) {
+    background-color: #F2EEC5;
+}
+#everyFourthRow tbody tr:nth-child(4n+3) {
+    background-color: #E7E0A5;
+}
+#everyFourthRow tbody tr:nth-child(4n) {
+    background-color: #D9D285;
+}
+
+#rounded table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid black;
+    border-radius: 9px;
+}
+#rounded table td {
+    padding:8px;
+}
+#rounded table thead tr td {
+    border-bottom: 1px solid black;
+}

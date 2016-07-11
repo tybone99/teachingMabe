@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<title>Lots of JavaScript</title>
+	<script>
+		function thisBabyIsHuge() {
+			var monster = {
+				"there": 1,
+				"is": 2,
+				"so": 3,
+				"much": 4,
+				"JavaScript": 5,
+				"here": 6
+			};
+			
+			if (window.location.href === "TheMagicalKingdom") {
+				alert("Lost all hope yet?");
+			}
+			
+			for(var i = 0; i < 3024; i++) {
+				var contentPane = document.getElementById("dynamicContent");
+				<!-- Brad's placeholder for debugging -->
+				contentPane.innerHTML = contentPane.innerHTML + "line " + i + "<br/>";
+			}
+		}
+	</script>
+	<body>
+		<div id="dynamicContent">
+		</div>
+	</body>
+</html>

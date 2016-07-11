@@ -1,0 +1,8 @@
+git status - The current status of your git repo (files waiting to be added, files missing)
+git add - add your changes to commit them
+git commit -m "Message" - Finalize your changes in your git repo. If vim comes up, type :q!
+git log - show all of your past changes
+git push origin master - move your changes from your computer to the GitHub server
+git pull - Download changes from GitHub to your computer
+git checkout -- [filename] - remove changes that have happened in a file since the last commit
+git help [command] - gives you help for a specific command

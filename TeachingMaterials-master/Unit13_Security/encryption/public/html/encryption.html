@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encryption</title>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="../js/ngApp.js"></script>
+    <script src="../js/CryptoService.js"></script>
+    <script src="../js/CryptoController.js"></script>
+</head>
+<body data-ng-app="encryptApp" data-ng-controller="CryptoController as crypto">
+    Algorithm:
+    <select id="algorithms" data-ng-options="eachCipher as eachCipher for eachCipher in crypto.cipherChoices"
+            data-ng-model="crypto.selectedCipher">
+    </select>
+    <br/>
+    <span class="sidenote">(OCB is good for non-commercial, CBC can be used for anything)</span>
+
+    <div id="mainContent">
+        <div id="encryptCol" class="column">
+            <h1>Encrypt</h1>
+            Message:<br/>
+            <textarea id="message" placeholder="Your secrets go here...." rows="5" data-ng-model="crypto.plainTextIn">
+            </textarea>
+            <br/>
+            Password: <input type="text" data-ng-model="crypto.encryptKey"/>
+            <br/>
+            <button id="encryptNow" data-ng-click="crypto.encryptPlainText()">Go! &#8595;</button>
+
+            <h1>Result</h1>
+            <textarea id="encryptResult" rows="5" data-ng-model="crypto.cipherTextOut"></textarea>
+        </div>
+        <div id="decryptCol" class="column">
+            <h1>Decrypt</h1>
+            Message:<br/>
+            <textarea id="decryptInput" placeholder="Your encrypted text, please." rows="5"
+                      data-ng-model="crypto.cipherTextIn"></textarea>
+            <br/>
+            Password: <input type="text" data-ng-model="crypto.decryptKey"/>
+            <br/>
+            <button id="decryptNow" data-ng-click="crypto.decryptCipherText()">Go! &#8595;</button>
+
+            <h1>Result</h1>
+            <textarea id="decryptResult" rows="5" data-ng-model="crypto.plainTextOut"></textarea>
+        </div>
+    </div>
+</body>
+</html>

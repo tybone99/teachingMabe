@@ -1,0 +1,91 @@
+﻿Week 25 Day 5 - Ionic Plugins
+
+
+Review
+Ionic Emulate, Run, View
+
+
+Ionic Creator
+https://creator.ionic.io
+Geolocation & Mapping Tutorial
+http://www.gajotres.net/using-cordova-geoloacation-api-with-google-maps-in-ionic-framework/
+Simplified steps:
+ionic start geo blank
+cd geo
+ionic add ngCordova
+
+
+Add to your index.html, right before the cordova.js:
+<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+
+
+ionic plugin add cordova-plugin-geolocation
+ionic plugin add cordova-plugin-whitelist
+
+
+In the index.html, add a this controller and div to the ion-content tag:
+<ion-content ng-controller="MapController">
+        <div id="map" data-tap-disabled="true"></div>
+</ion-content>
+
+
+In the index.html, add this right before the closing body tag:
+        <script src="https://maps-api-ssl.google.com/maps/api/js?libraries=places"></script>
+
+
+In the app.js file, add this controller after the run function:
+.controller('MapController', MapController);
+
+
+MapController.$inject = ['$cordovaGeolocation', '$ionicLoading', '$ionicPlatform'];
+            function MapController($cordovaGeolocation, $ionicLoading, $ionicPlatform) {
+          var mc = this;
+
+
+            $ionicPlatform.ready(function() {
+
+
+                $ionicLoading.show({
+                    template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Acquiring location...'
+                });
+
+
+                var posOptions = {
+                    enableHighAccuracy: true,
+                    timeout: 20000,
+                    maximumAge: 0
+                };
+
+
+                $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+                    var lat  = position.coords.latitude;
+                    var long = position.coords.longitude;
+                    var myLatlng = new google.maps.LatLng(lat, long);
+
+
+                    var mapOptions = {
+                        center: myLatlng,
+                        zoom: 16,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                    mc.map = map;
+                    $ionicLoading.hide();
+
+
+                }, function(err) {
+                    $ionicLoading.hide();
+                    console.log(err);
+                });
+            });
+        };
+
+
+In the style.css file, add these:
+        #map { height: 100%; width: 100%; }
+.scroll { height: 100%; }
+More Learning
+http://appcamp.io/ - AWESOME! Interactive, like codeschool.com.
+https://app.pluralsight.com/.../table-of-contents - Ionic course on Pluralsight
+Exercise
+Fork and clone the https://github.com/driftyco/ionic-weather repo, get it running, emulating and viewing.

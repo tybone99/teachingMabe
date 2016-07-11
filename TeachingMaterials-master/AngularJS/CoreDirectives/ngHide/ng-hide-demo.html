@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngHide Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body ng-app>
+    <h1>ngHide Demo</h1>
+    <p ng-hide="displayText">This text should only be displayed when the checkbox below is NOT selected or checked.</p>
+    <label>Show text above?</label>
+    <input type="checkbox" ng-model="displayText"/>
+    <br>
+    <br>
+    <label>displayText:</label>
+    <pre>{{ displayText }}</pre>
+</body>
+</html>

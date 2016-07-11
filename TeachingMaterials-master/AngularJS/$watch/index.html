@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="watch-example">
+<head>
+    <meta charset="UTF-8">
+    <title>$watch example</title>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+
+    <script>
+        angular.module('watch-example', [])
+                .controller('WatchController', function($timeout, $scope) {
+                    $scope.name = 'MATC';
+                    $scope.counter = 0;
+
+                    $scope.$watch('name', function(newValue, oldValue) {
+//                        if (newValue === oldValue) {
+//                            return;
+//                        }
+                        if (newValue !== oldValue) {
+                            $scope.counter++;
+                        }
+                    });
+
+                    setTimeout(function() {
+                        $scope.$apply(function() {
+                            $scope.name += ' Rocks!';
+//                            $scope.$apply();
+                        });
+                    }, 2000);
+
+                    $timeout(function() {
+                        $scope.name += ' really';
+//                        $scope.$apply();
+                    }, 1000);
+
+//                    $scope.$watch('counter', function(newValue, oldValue) {
+//                        if (newValue !== oldValue) {
+////                            $scope.counter++;
+//                            $scope.name += 'n';
+//                        }
+//                    });
+
+                    var input = document.getElementsByTagName('input')[0];
+                    input = angular.element(input);
+                    console.log(input);
+                    input.bind('click', function() {
+                        $scope.$apply(function() {
+                            $scope.name = 'something else';
+                        });
+                    })
+                });
+    </script>
+</head>
+<body ng-controller="WatchController">
+    <input type="text" ng-model="name"/>
+    <br>
+    <span>Change count: <span ng-bind="counter"></span></span>
+</body>
+</html>

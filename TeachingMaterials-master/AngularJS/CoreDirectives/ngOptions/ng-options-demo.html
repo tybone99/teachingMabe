@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngOptions Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="ngOptionsDemo.js"></script>
+</head>
+<body ng-app="ngOptionsDemo" ng-controller="OptionsController as vm">
+    <h1>ngOptions Demo</h1>
+
+    <label>States from Array</label>
+    <select ng-model="myStateFromArray" ng-options="state.name for state in vm.statesInArray"></select>
+    <br>
+    <br>
+    <label>myStateFromArray:</label>
+    <pre>{{ myStateFromArray }}</pre>
+
+    <hr>
+
+    <label>States from Object</label>
+    <select ng-model="myStateFromObject" ng-options="name for (abbreviation, name) in vm.statesInObject"></select>
+    <br>
+    <br>
+    <label>myStateFromObject:</label>
+    <pre>{{ myStateFromObject }}</pre>
+
+    <hr>
+
+    <label>States from Array (select as syntax)</label>
+    <select ng-model="myStateFromArray2" ng-options="state.abbreviation as state.name for state in vm.statesInArray"></select>
+    <br>
+    <br>
+    <label>myStateFromArray2:</label>
+    <pre>{{ myStateFromArray2 }}</pre>
+
+    <hr>
+
+    <label>States from Object (select as syntax)</label>
+    <select ng-model="myStateFromObject2" ng-options="abbreviation as name for (abbreviation, name) in vm.statesInObject"></select>
+    <br>
+    <br>
+    <label>myStateFromObject2:</label>
+    <pre>{{ myStateFromObject2 }}</pre>
+
+</body>
+</html>
