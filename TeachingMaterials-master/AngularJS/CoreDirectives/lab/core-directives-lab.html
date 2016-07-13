@@ -15,10 +15,15 @@
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Name" ng-model="vm.form.name">
             </div>
-            <div class="form-group">
-                <label for="legalName">Legal Name</label>
-                <input type="text" class="form-control" id="legalName" placeholder="Legal Name" ng-model="vm.form.legalName">
+            <input type="checkbox" ng-model="displayLegalName"/>
+            if this is not your legal name?
+
+
+            <div class="form-group" ng-show="displayLegalName">
+                <label for="legalName"> LegalName:</label>
+                <input type="text" class="form-control" id="legalName"  placeholder="Legal Name" ng-model="vm.form.legalName">
             </div>
+            <br><br>
             <div class="form-group">
                 <label for="dob">Date of Birth</label>
                 <input type="date" class="form-control" id="dob" ng-model="vm.form.dob">
@@ -49,6 +54,8 @@
                     </label>
                 </div>
             </div>
+            <!-- display who should play if not insureence if have it display something to colect inshurence -->
+            <div ng-if="vm.form.insurance">dfsdsfdfsdfsdsfdfsfdsdfs</div>
             <div class="alert alert-danger" role="alert">Who should pay the full amount when I have no insurance? You should, of course!</div>
             <div class="form-group">
                 <label for="painScale">Pain Scale</label>
